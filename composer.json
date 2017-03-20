@@ -1,30 +1,29 @@
 {
-  "name": "koke/flarum-ext-demo",
-  "description": "Allow users to flag posts for moderator review.",
+  "name": "lifengzhai/flarum-ext-reward",
+  "description": "flarum-ext-reward",
   "type": "flarum-extension",
-  "keywords": ["demo"],
+  "keywords": ["reward", "flarum"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Toby Zerner",
-      "email": "toby.zerner@gmail.com"
+      "name": "koke",
+      "email": "ke218@126.com"
     }
   ],
   "support": {
-    "issues": "https://github.com/flarum/core/issues",
-    "source": "https://github.com/flarum/flarum-ext-flags"
+    "source": "https://github.com/lifengzhai/flarum-ext-reward.git"
   },
   "require": {
     "flarum/core": "^0.1.0-beta.6"
   },
   "autoload": {
     "psr-4": {
-      "Koke\\Demo\\": "src/"
+      "Lifengzhai\\Reward\\": "src/"
     }
   },
   "extra": {
     "flarum-extension": {
-      "title": "demo"
+      "title": "reward"
     }
   }
 }
