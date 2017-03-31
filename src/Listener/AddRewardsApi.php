@@ -11,7 +11,7 @@ use Flarum\Event\ConfigureApiRoutes;
 use Lifengzhai\Reward\Api\Controller;
 use Illuminate\Contracts\Events\Dispatcher;
 
-class AddTagsApi
+class AddRewardsApi
 {
     public function subscribe(Dispatcher $events)
     {
