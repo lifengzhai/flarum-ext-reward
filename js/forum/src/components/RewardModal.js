@@ -14,21 +14,21 @@ export default class RewardModal extends Modal {
     }
     title() {
         // return app.translator.trans('core.forum.change_password.title');
-        return '选择打赏金额';
+        return '赞赏';
     }
     content() {
         return (
             <div className="Modal-body">
                 <div className="Form Form--centered">
-                    <div className="ButtonGroup">
+                    <div className="RewardNumButtonGroup">
                         {Button.component({
-                            className: 'Button',
+                            className: 'Button RewardNumButton',
                             type: 'button',
                             children: '1',
                             onclick: this.setRewardNum.bind(this)
                         })}
                         {Button.component({
-                            className: 'Button',
+                            className: 'Button RewardNumButton',
                             type: 'button',
                             children: '5',
                             onclick: this.setRewardNum.bind(this)
@@ -40,7 +40,7 @@ export default class RewardModal extends Modal {
                             onclick: this.setRewardNum.bind(this)
                         })}
                     </div>
-                    <p className="helpText ">选择打赏金额（元）</p>
+                    <p className="helpText ">其他金额</p>
                     <div className="Form-group">
                         {Button.component({
                             className: 'Button Button--primary Button--block',
@@ -54,6 +54,7 @@ export default class RewardModal extends Modal {
         );
     }
     setRewardNum(e) {
+			  console.log(this);
         this.rewardNum = e.target.innerText;
         console.log(this.rewardNum);
     }

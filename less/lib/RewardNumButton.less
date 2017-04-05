@@ -1,0 +1,58 @@
+.RewardNumButton {
+  color: @control-danger-color;
+  border: 1px solid @control-danger-color;
+  font-weight: bolder;
+  margin: 0 15px!important;
+
+  &:hover {
+    text-decoration: none;
+    background-color: @control-danger-color;
+    color: @code-color;
+  }
+
+  &:active,
+  &.active,
+  .open > &.Dropdown-toggle {
+    .box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    outline: none;
+    background-color: @control-danger-color;
+    color: @code-color;
+  }
+
+  &:focus,
+  &.focus {
+    outline: none;
+    background-color: @control-danger-color;
+    .Button-label {
+      color: @code-color;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: default;
+    opacity: 0.65;
+    .box-shadow(none);
+  }
+
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+
+  .Button-label {
+    .transition(margin-right 0.1s);
+  }
+  .LoadingIndicator {
+    color: inherit;
+    margin: 0 -5px 0 -15px;
+  }
+  &.loading {
+    .Button-label {
+      margin-right: 20px;
+    }
+  }
+}

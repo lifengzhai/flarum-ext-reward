@@ -111,7 +111,7 @@ System.register('lifengzhai/reward/components/RewardModal', ['flarum/components/
                     key: 'title',
                     value: function title() {
                         // return app.translator.trans('core.forum.change_password.title');
-                        return '选择打赏金额';
+                        return '赞赏';
                     }
                 }, {
                     key: 'content',
@@ -124,15 +124,15 @@ System.register('lifengzhai/reward/components/RewardModal', ['flarum/components/
                                 { className: 'Form Form--centered' },
                                 m(
                                     'div',
-                                    { className: 'ButtonGroup' },
+                                    { className: 'RewardNumButtonGroup' },
                                     Button.component({
-                                        className: 'Button',
+                                        className: 'Button RewardNumButton',
                                         type: 'button',
                                         children: '1',
                                         onclick: this.setRewardNum.bind(this)
                                     }),
                                     Button.component({
-                                        className: 'Button',
+                                        className: 'Button RewardNumButton',
                                         type: 'button',
                                         children: '5',
                                         onclick: this.setRewardNum.bind(this)
@@ -147,7 +147,7 @@ System.register('lifengzhai/reward/components/RewardModal', ['flarum/components/
                                 m(
                                     'p',
                                     { className: 'helpText ' },
-                                    '\u9009\u62E9\u6253\u8D4F\u91D1\u989D\uFF08\u5143\uFF09'
+                                    '\u5176\u4ED6\u91D1\u989D'
                                 ),
                                 m(
                                     'div',
@@ -165,6 +165,7 @@ System.register('lifengzhai/reward/components/RewardModal', ['flarum/components/
                 }, {
                     key: 'setRewardNum',
                     value: function setRewardNum(e) {
+                        console.log(this);
                         this.rewardNum = e.target.innerText;
                         console.log(this.rewardNum);
                     }
